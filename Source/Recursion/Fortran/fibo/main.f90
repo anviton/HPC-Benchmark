@@ -1,17 +1,3 @@
-! program MonProgramme
-!   use MonModule
-
-!   type(MaClasse) :: objet
-!   real :: valeur_initiale = 12
-
-!   ! Initialisation de l'objet en utilisant la méthode Initialiser
-!   call objet%Initialiser(valeur_initiale)
-
-!   ! Utilisation de l'objet
-!   print *, "La valeur de l'objet est :", objet%donnee
-
-! end program MonProgramme
-
 module fibonacci_mod
   implicit none
 contains
@@ -31,9 +17,8 @@ program fibonacci_recursive
     use fibonacci_mod
     implicit none
     integer(kind = 8) :: res
-
-    res = fibonacci(50)
-    ! Calculer et afficher les nombres de Fibonacci de 0 à 100
-    print *, 'Fibonacci(50) = ', res
+    integer :: n = 45
+    res = fibonacci(45)
+    print *,  'Le ', n ,"ème terme de la suite de Fibonacci est : ", res
 end program fibonacci_recursive
 
