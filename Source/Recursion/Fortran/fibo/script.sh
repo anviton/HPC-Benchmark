@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Nom de l'exécutable
-EXECUTABLE=MonProgramme
+EXECUTABLE=fibo_fortran
 
 # Chemin vers le répertoire contenant les fichiers source
 SOURCE_DIR=.
