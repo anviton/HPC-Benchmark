@@ -5,5 +5,5 @@ end
 
 n = 45
 res = fibonacci(n)
-puts  "Le " + n.to_s + "ème terme de la suite de Fibonacci est : " + res.to_s
+puts  "Ruby result : " + res.to_s
   

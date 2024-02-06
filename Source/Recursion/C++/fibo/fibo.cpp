@@ -10,7 +10,7 @@ int fibonacci(int n) {
 
 int main() {
     int n = 45;
-    std::cout << "Le " << n << "ème terme de la suite de Fibonacci est : " << fibonacci(n) << std::endl;
+    std::cout << "C++ result : " << fibonacci(n) << std::endl;
     return 0;
 }
 

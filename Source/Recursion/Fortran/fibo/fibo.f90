@@ -19,6 +19,6 @@ program fibonacci_recursive
     integer(kind = 8) :: res
     integer :: n = 45
     res = fibonacci(45)
-    print *,  'Le ', n ,"ème terme de la suite de Fibonacci est : ", res
+    print *,'Fortran result : ', res
 end program fibonacci_recursive
 
