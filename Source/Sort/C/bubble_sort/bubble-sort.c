@@ -41,7 +41,7 @@ int main()
 
 
     bubbleSort(tab, 100000);
-    print(tab, 100000);
+    //print(tab, 100000);
 
     return 0;
 }
