@@ -11,7 +11,7 @@ echo -e "\n\n"
 
 cd "${base_path}C++/bubble_sort"
 g++ bubble-sort.cpp -o bubble-sort_cpp
-echo "[Recursion] - run C++ file..."
+echo "[Bubble sort] - run C++ file..."
 time ./bubble-sort_cpp
 cd - > /dev/null
 echo -e "\n\n"
@@ -32,7 +32,7 @@ echo -e "\n\n"
 
 cd "${base_path}Java/bubble_sort"
 javac -d bin -sourcepath src src/BubbleSort.java
-echo "[Recursion] - run Java file..."
+echo "[Bubble sort] - run Java file..."
 time java -cp bin BubbleSort
 cd - > /dev/null
 echo -e "\n\n"
@@ -44,7 +44,7 @@ cd - > /dev/null
 echo -e "\n\n"
 
 cd "${base_path}Ruby/bubble_sort"
-echo "[Recursion] - run Ruby file..."
+echo "[Bubble sort] - run Ruby file..."
 time ruby bubble-sort.rb
 cd - > /dev/null
 echo -e "\n\n"
