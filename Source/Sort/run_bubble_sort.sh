@@ -9,16 +9,10 @@ time ./bubble-sort_c
 cd - > /dev/null
 echo -e "\n\n"
 
-cd "${base_path}Python/bubble_sort"
-echo "[Bubble sort] - run Python file..."
-time python3 bubble-sort.py
-cd - > /dev/null
-echo -e "\n\n"
-
-cd "${base_path}Rust/bubble_sort"
-rustc bubble-sort.rs -o bubble-sort_rust
-echo "[Bubble sort] - run Rust file..."
-time ./bubble-sort_rust
+cd "${base_path}C++/bubble_sort"
+g++ bubble-sort.cpp -o bubble-sort_cpp
+echo "[Recursion] - run C++ file..."
+time ./bubble-sort_cpp
 cd - > /dev/null
 echo -e "\n\n"
 
@@ -43,15 +37,21 @@ time java -cp bin BubbleSort
 cd - > /dev/null
 echo -e "\n\n"
 
-cd "${base_path}C++/bubble_sort"
-g++ bubble_sort.cpp -o bubble_sort_cpp
-echo "[Recursion] - run C++ file..."
-time ./bubble_sort_cpp
+cd "${base_path}Python/bubble_sort"
+echo "[Bubble sort] - run Python file..."
+time python3 bubble-sort.py
 cd - > /dev/null
 echo -e "\n\n"
 
-cd "${base_path}Ruby/bubble_sort"
+cd "${base_path}Ruby/bubble-sort"
 echo "[Recursion] - run Ruby file..."
-time ruby bubble_sort.rb
+time ruby bubble-sort.rb
+cd - > /dev/null
+echo -e "\n\n"
+
+cd "${base_path}Rust/bubble_sort"
+rustc bubble-sort.rs -o bubble-sort_rust
+echo "[Bubble sort] - run Rust file..."
+time ./bubble-sort_rust
 cd - > /dev/null
 echo -e "\n\n"
