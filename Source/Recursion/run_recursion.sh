@@ -10,7 +10,7 @@ cd - > /dev/null
 echo -e "\n\n"
 
 cd "${base_path}C++/fibo"
-g++ fibo.cpp -o fibo_cpp
+g++ fibonacci.cpp -o fibo_cpp
 echo "[Recursion] - run C++ file..."
 time ./fibo_cpp
 cd - > /dev/null
@@ -33,7 +33,7 @@ echo -e "\n\n"
 cd "${base_path}Java/fibo"
 javac -d bin -sourcepath src src/Fibonacci.java
 echo "[Recursion] - run Java file..."
-time java -cp bin Fibo
+time java -cp bin Fibonacci
 cd - > /dev/null
 echo -e "\n\n"
 
