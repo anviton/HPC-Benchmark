@@ -9,16 +9,10 @@ time ./fibo_c
 cd - > /dev/null
 echo -e "\n\n"
 
-cd "${base_path}Python/fibo"
-echo "[Recursion] - run Python file..."
-time python3 fibonacci.py
-cd - > /dev/null
-echo -e "\n\n"
-
-cd "${base_path}Rust/fibo"
-rustc fibonacci.rs -o fibo_rust
-echo "[Recursion] - run Rust file..."
-time ./fibo_rust
+cd "${base_path}C++/fibo"
+g++ fibo.cpp -o fibo_cpp
+echo "[Recursion] - run C++ file..."
+time ./fibo_cpp
 cd - > /dev/null
 echo -e "\n\n"
 
@@ -37,21 +31,27 @@ cd - > /dev/null
 echo -e "\n\n"
 
 cd "${base_path}Java/fibo"
-javac -d bin -sourcepath src src/Fibo.java
+javac -d bin -sourcepath src src/Fibonacci.java
 echo "[Recursion] - run Java file..."
 time java -cp bin Fibo
 cd - > /dev/null
 echo -e "\n\n"
 
-cd "${base_path}C++/fibo"
-g++ fibo.cpp -o fibo
-echo "[Recursion] - run C++ file..."
-time ./fibo
+cd "${base_path}Python/fibo"
+echo "[Recursion] - run Python file..."
+time python3 fibonacci.py
 cd - > /dev/null
 echo -e "\n\n"
 
 cd "${base_path}Ruby/fibo"
 echo "[Recursion] - run Ruby file..."
-time ruby fibo.rb
+time ruby fibonacci.rb
+cd - > /dev/null
+echo -e "\n\n"
+
+cd "${base_path}Rust/fibo"
+rustc fibonacci.rs -o fibo_rust
+echo "[Recursion] - run Rust file..."
+time ./fibo_rust
 cd - > /dev/null
 echo -e "\n\n"
