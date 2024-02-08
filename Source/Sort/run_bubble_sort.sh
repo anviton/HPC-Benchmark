@@ -43,7 +43,7 @@ time python3 bubble-sort.py
 cd - > /dev/null
 echo -e "\n\n"
 
-cd "${base_path}Ruby/bubble-sort"
+cd "${base_path}Ruby/bubble_sort"
 echo "[Recursion] - run Ruby file..."
 time ruby bubble-sort.rb
 cd - > /dev/null
