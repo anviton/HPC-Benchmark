@@ -404,7 +404,7 @@ Source/Sort/Rust/bubble_sort/bubble-sort_rust
 ## Binary trees
 ### Binary trees
 #### C
-    Source/BinaryTrees/C/binary_trees/binary-trees_c
+Source/BinaryTrees/C/binary_trees/binary-trees_c
 
 #### C++
 Source/BinaryTrees/C++/binary_trees/binary-trees_cpp
