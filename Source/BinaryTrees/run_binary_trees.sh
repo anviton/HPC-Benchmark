@@ -34,9 +34,9 @@ cd - > /dev/null
 echo -e "\n\n"
 
 cd "${base_path}Fortran/binary_trees"
-gfortran -o binary-trees_fortan ./*.f90
+gfortran -o binary-trees_fortran ./*.f90
 echo "[Binary trees] - run Fortran file..."
-time ./binary-trees_fortan
+time ./binary-trees_fortran
 cd - > /dev/null
 echo -e "\n\n"
 
