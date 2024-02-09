@@ -30,8 +30,8 @@ cd - > /dev/null
 
 #################################################
 
-cd "${base_path}Rust/fannkuch-redux"
-rustc fannkuch-redux.rs -o fannkuch-redux
+cd "${base_path}Rust/fasta"
+rustc fasta.rs -o fasta
 echo "[Fasta] - run Rust file..."
 time ./fasta 25000000
 cd - > /dev/null
