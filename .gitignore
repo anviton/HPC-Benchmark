@@ -407,14 +407,14 @@ Source/Sort/Rust/bubble_sort/bubble-sort_rust
     Source/BinaryTrees/C/binary_trees/binary-trees_c
 
 #### C++
-    Source/BinaryTrees/C++/binary_trees/binary-trees_cpp
-    Source/BinaryTrees/C++/binary_trees/binary-trees_smartPtr_cpp
+Source/BinaryTrees/C++/binary_trees/binary-trees_cpp
+Source/BinaryTrees/C++/binary_trees/binary-trees_smartPtr_cpp
 
 #### Fortran
-    Source/BinaryTrees/Fortran/binary_trees/binary-trees_fortran
+Source/BinaryTrees/Fortran/binary_trees/binary-trees_fortran
 
 #### Rust
-    Source/BinaryTrees/Rust/binary_trees/binary-trees_rust
+Source/BinaryTrees/Rust/binary_trees/binary-trees_rust
 
 
 
