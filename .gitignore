@@ -417,6 +417,20 @@ Source/BinaryTrees/Fortran/binary_trees/binary-trees_fortran
 Source/BinaryTrees/Rust/binary_trees/binary-trees_rust
 
 
+## Fannkuch
+### Fannkuch redux
+#### C
+Source/Fannkuch/C/fannkuch_redux/fannkuch-redux_c
+
+#### C++
+Source/Fannkuch/C++/fannkuch_redux/fannkuch-redux_cpp
+
+#### Fortran
+Source/Fannkuch/Fortran/fannkuch_redux/fannkuch-redux_fortran
+
+#### Rust
+Source/Fannkuch/Rust/fannkuch_redux/fannkuch-redux_rust
+
 
 
 

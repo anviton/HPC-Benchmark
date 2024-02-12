@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int fannkuch(int n) {
+// Ajoutez un paramètre de pointeur pour le checksum
+int fannkuch(int n, int *checksum) {
     int *perm  = malloc(n * sizeof(int));
     int *perm1 = malloc(n * sizeof(int));
     int *count = malloc(n * sizeof(int));
-    int maxFlips = 0, permCount = 0, checksum = 0;
+    int maxFlips = 0, permCount = 0;
+    *checksum = 0; // Initialisez le checksum
 
     // Initialize perm1 with 1 to n
     for (int i = 0; i < n; i++) {
@@ -29,7 +31,6 @@ int fannkuch(int n) {
         int k;
 
         while ((k = perm[0]) != 0) {
-            // k is the first number in the array, so we flip perm[0]...perm[k]
             int k2 = (k + 1) >> 1;
             for (int i = 0; i < k2; i++) {
                 int temp = perm[i];
@@ -42,13 +43,19 @@ int fannkuch(int n) {
         maxFlips = flipsCount > maxFlips ? flipsCount : maxFlips;
         permCount++;
 
+        if (permCount % 2 == 0) {
+            *checksum -= flipsCount;
+        } else {
+            *checksum += flipsCount;
+        }
+
         // Generate next permutation
         while (1) {
             if (r == n) {
                 free(perm);
                 free(perm1);
                 free(count);
-                return maxFlips;
+                return maxFlips; // Retourne maxFlips comme avant
             }
 
             int perm0 = perm1[0];
@@ -69,6 +76,10 @@ int fannkuch(int n) {
 
 int main() {
     int n = 12;
-    printf("Maximum flips for n=%d is %d\n", n, fannkuch(n));
+    int checksum;
+    int maxFlips = fannkuch(n, &checksum); // Passez l'adresse de checksum
+    printf("%d\n", checksum); // Affichez le checksum
+    printf("Pfannkuchen(%d) = %d\n", n, maxFlips);
     return 0;
 }
+
