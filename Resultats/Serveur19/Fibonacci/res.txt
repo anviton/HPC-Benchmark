@@ -1,0 +1,73 @@
+Le 13/02 13h50
+
+antoine@serveur19:~/projet_ZZ2/HPC-Benchmark/Source/Recursion$ ./run_recursion.sh 
+[Recursion] - run C file...
+C result : 1134903170
+
+real	0m8,576s
+user	0m8,575s
+sys	0m0,001s
+
+
+
+[Recursion] - run C++ file...
+C++ result : 1134903170
+
+real	0m8,398s
+user	0m8,393s
+sys	0m0,005s
+
+
+
+[Recursion] - run Erlang file...
+Erlang result : 1134903170
+
+real	0m15,930s
+user	0m16,545s
+sys	0m2,539s
+
+
+
+[Recursion] - run Fortran file...
+ Fortran result :            1134903170
+
+real	0m9,991s
+user	0m9,985s
+sys	0m0,005s
+
+
+
+[Recursion] - run Java file...
+Java result : 1134903170
+
+real	0m4,341s
+user	0m4,324s
+sys	0m0,049s
+
+
+
+[Recursion] - run Python file...
+Python result : 1134903170
+
+real	2m51,582s
+user	2m51,549s
+sys	0m0,017s
+
+
+
+[Recursion] - run Ruby file...
+Ruby result : 1134903170
+
+real	1m48,810s
+user	1m48,798s
+sys	0m0,004s
+
+
+
+[Recursion] - run Rust file...
+Rust result : 1134903170
+
+real	0m12,179s
+user	0m12,174s
+sys	0m0,004s
+

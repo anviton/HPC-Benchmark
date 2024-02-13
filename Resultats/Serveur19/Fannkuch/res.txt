@@ -1,0 +1,79 @@
+antoine@serveur19:~/projet_ZZ2/HPC-Benchmark/Source/Fannkuch$ ./run_fannkuch.sh 
+[Fannkuch redux] - run C file...
+3968050
+Pfannkuchen(12) = 65
+
+real	1m14,663s
+user	1m14,657s
+sys	0m0,000s
+
+
+
+[Fannkuch redux] - run C++ file...
+3968050
+Pfannkuchen(12) = 65
+
+real	0m2,810s
+user	6m15,489s
+sys	0m0,020s
+
+
+
+[Fannkuch redux] - run Erlang file...
+3968050
+Pfannkuchen(12) = 65
+
+real	0m26,306s
+user	4m11,603s
+sys	0m2,074s
+
+
+
+[Fannkuch redux] - run Fortran file...
+3968050
+Pfannkuchen(12) = 65
+
+real	1m8,298s
+user	1m8,288s
+sys	0m0,004s
+
+
+
+[Fannkuch redux] - run Java file...
+3968050
+Pfannkuchen(12) = 65
+
+real	0m44,664s
+user	0m44,693s
+sys	0m0,076s
+
+
+
+[Fannkuch redux] - run Python file...
+3968050
+Pfannkuchen(12) = 65
+
+real	0m13,416s
+user	33m13,865s
+sys	0m1,534s
+
+
+
+[Fannkuch redux] - run Ruby file...
+3968050
+Pfannkuchen(12) = 65
+
+real	21m38,345s
+user	21m35,653s
+sys	0m2,600s
+
+
+
+[Fannkuch redux] - run Rust file...
+3968050
+Pfannkuchen(12) = 65
+
+real	2m15,878s
+user	2m15,860s
+sys	0m0,000s
+

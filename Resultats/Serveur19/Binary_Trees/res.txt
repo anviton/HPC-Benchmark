@@ -1,0 +1,260 @@
+antoine@serveur19:~/projet_ZZ2/HPC-Benchmark/Source/BinaryTrees$ ./run_binary_trees.sh 
+[Binary trees] - run C file...
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+
+real	0m4,795s
+user	0m4,722s
+sys	0m0,072s
+
+
+
+[Binary trees] - run C++ file...
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+
+real	0m4,932s
+user	0m4,887s
+sys	0m0,045s
+
+
+
+[Binary trees] - run C++ file with Smart Pointers...
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+
+real	0m46,193s
+user	0m46,113s
+sys	0m0,076s
+
+
+
+[Binary trees] - run Erlang file...
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+
+real	0m4,927s
+user	0m5,334s
+sys	0m2,547s
+
+
+
+[Binary trees] - run Fortran file...
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+ Tree of depth           22  has      4194303  nodes.
+
+real	0m5,219s
+user	0m5,141s
+sys	0m0,077s
+
+
+
+[Binary trees] - run Java file...
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+
+real	0m1,298s
+user	0m2,917s
+sys	0m7,725s
+
+
+
+[Binary trees] - run Python file...
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+Tree of depth 22 has 8388607 nodes.
+
+real	0m36,676s
+user	0m34,075s
+sys	0m2,596s
+
+
+
+[Binary trees] - run Ruby file...
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+
+real	0m28,317s
+user	0m27,859s
+sys	0m0,444s
+
+
+
+[Binary trees] - run Rust file...
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+Tree of depth 22 has 4194303 nodes.
+
+real	0m6,858s
+user	0m6,793s
+sys	0m0,065s
+

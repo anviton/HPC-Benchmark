@@ -1,0 +1,64 @@
+antoine@serveur19:~/projet_ZZ2/HPC-Benchmark/Source/Sort$ ./run_bubble_sort.sh 
+[Bubble sort] - run C file...
+
+real	0m29,960s
+user	0m29,957s
+sys	0m0,001s
+
+
+
+[Bubble sort] - run C++ file...
+
+real	1m3,715s
+user	1m3,707s
+sys	0m0,004s
+
+
+
+[Bubble sort] - run Erlang file...
+
+real	0m17,890s
+user	0m33,164s
+sys	0m4,089s
+
+
+
+[Bubble sort] - run Fortran file...
+
+real	0m26,595s
+user	0m26,592s
+sys	0m0,001s
+
+
+
+[Bubble sort] - run Java file...
+Nombre d'entiers lus : 100000
+
+real	0m15,854s
+user	0m16,483s
+sys	0m0,188s
+
+
+
+[Bubble sort] - run Python file...
+
+real	6m47,732s
+user	6m47,632s
+sys	0m0,064s
+
+
+
+[Bubble sort] - run Ruby file...
+
+real	10m10,475s
+user	10m9,099s
+sys	0m1,320s
+
+
+
+[Bubble sort] - run Rust file...
+
+real	1m36,809s
+user	1m36,796s
+sys	0m0,004s
+

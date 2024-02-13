@@ -431,7 +431,19 @@ Source/Fannkuch/Fortran/fannkuch_redux/fannkuch-redux_fortran
 #### Rust
 Source/Fannkuch/Rust/fannkuch_redux/fannkuch-redux_rust
 
+## Fasta
+### Fasta
+#### C
+Source/Fasta/C/fasta/fasta_c
 
+#### C++
+Source/Fasta/C++/fasta/fasta_cpp
+
+#### Fortran
+Source/Fannkuch/Fortran/fannkuch_redux/fannkuch-redux_fortran
+
+#### Rust
+Source/Fannkuch/Rust/fannkuch_redux/fannkuch-redux_rust
 
 
 

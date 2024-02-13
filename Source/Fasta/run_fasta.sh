@@ -6,12 +6,18 @@ base_path="./"
 # FASTA
 
 cd "${base_path}C/fasta"
-gcc fasta.c -o fasta
+gcc fasta.c -o fasta_c
 echo "[Fasta] - run C file..."
-time ./fasta 25000000
+time ./fasta_c 25000000
 cd - > /dev/null
+echo -e "\n\n"
 
-################################################
+cd "${base_path}C++/fasta"
+g++ fasta.cpp -o fasta_cpp
+echo "[Fasta] - run C++ file..."
+time ./fasta_cpp 25000000
+cd - > /dev/null
+echo -e "\n\n"
 
 cd "${base_path}Erlang/fasta"
 erlc fasta.erl
@@ -20,21 +26,15 @@ time erl -noshell -s fasta main 25000000 -s init stop
 cd - > /dev/null
 echo -e "\n\n"
 
-################################################
-
-
 cd "${base_path}Python/fasta"
 echo "[Fasta] - run Python file..."
 time python3 fasta.py 25000000
 cd - > /dev/null
-
-#################################################
+echo -e "\n\n"
 
 cd "${base_path}Rust/fasta"
 rustc fasta.rs -o fasta
 echo "[Fasta] - run Rust file..."
 time ./fasta 25000000
 cd - > /dev/null
-
-#################################################
-
+echo -e "\n\n"
