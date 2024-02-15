@@ -1,0 +1,15 @@
+Powerjoular : C Fibonacci
+
+antoine@serveur19:~$ time sudo powerjoular -tp 90203
+[sudo] Mot de passe de antoine : 
+PID monitoring:	CPU: 0.00 % (0.54 %)	0.00 Watts (57.66 Watts)^C
+--------------------------
+Total energy: 288.40 Joules, including:
+	CPU energy: 288.40 Joules
+	GPU energy: 0.00 Joules
+--------------------------
+
+real	0m11,095s
+user	0m0,033s
+sys	0m0,016s
+

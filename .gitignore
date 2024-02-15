@@ -440,10 +440,10 @@ Source/Fasta/C/fasta/fasta_c
 Source/Fasta/C++/fasta/fasta_cpp
 
 #### Fortran
-Source/Fannkuch/Fortran/fannkuch_redux/fannkuch-redux_fortran
+Source/Fasta/Fortran/fasta/fasta_fortran
 
 #### Rust
-Source/Fannkuch/Rust/fannkuch_redux/fannkuch-redux_rust
+Source/Fasta/Rust/fasta/fasta_rust
 
 
 

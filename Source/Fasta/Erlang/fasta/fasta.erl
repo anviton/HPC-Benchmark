@@ -14,7 +14,7 @@
 
 main() -> main(["1000"]).
 main([Arg]) ->
-   N = list_to_integer(Arg),
+	N = list_to_integer(atom_to_list(Arg)),
    Seed = 42,
    write_fasta_cycle("ONE","Homo sapiens alu", ?ALU, N*2),
    NewSeed = write_fasta_rand("TWO","IUB ambiguity codes", ?IUB, N*3, Seed),

@@ -59,14 +59,14 @@ aminoacids * genelist, int count, int n) {
    int todo = n;
    int i, m;
 
-   //printf (">%s %s\n", id, desc);
+   printf (">%s %s\n", id, desc);
 
    for (; todo > 0; todo -= LINE_LENGTH) {
        char pick[LINE_LENGTH+1];
        if (todo < LINE_LENGTH) m = todo; else m = LINE_LENGTH;
        for (i=0; i < m; i++) pick[i] = selectRandom (genelist, count);
        pick[m] = '\0';
-       //puts (pick);
+       puts (pick);
    }
 }
 
@@ -79,19 +79,19 @@ s, int n) {
    ss = (char *) malloc (kn + 1);
    memcpy (ss, s, kn+1);
 
-   //printf (">%s %s\n", id, desc);
+   printf (">%s %s\n", id, desc);
 
    for (; todo > 0; todo -= LINE_LENGTH) {
        if (todo < LINE_LENGTH) m = todo; else m = LINE_LENGTH;
 
        while (m >= kn - k) {
-           //printf ("%s", s+k);
+           printf ("%s", s+k);
            m -= kn - k;
            k = 0;
        }
 
        ss[k + m] = '\0';
-       //puts (ss+k);
+       puts (ss+k);
        ss[k + m] = s[m+k];
        k += m;
    }
@@ -131,7 +131,7 @@ struct aminoacids homosapiens[] = {
 
 #define HOMOSAPIENS_LEN (sizeof (homosapiens) / sizeof (struct aminoacids))
 
-char * alu =
+const char * alu =
    "GGCCGGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGG" \
    "GAGGCCGAGGCGGGCGGATCACCTGAGGTCAGGAGTTCGAGA" \
    "CCAGCCTGGCCAACATGGTGAAACCCCGTCTCTACTAAAAAT" \

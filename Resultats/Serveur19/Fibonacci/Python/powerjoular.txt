@@ -1,0 +1,15 @@
+Powerjoular : Python Fibonacci
+
+antoine@serveur19:~$ time sudo powerjoular -tp 89080
+[sudo] Mot de passe de antoine : 
+PID monitoring:	CPU: 0.51 % (0.53 %)	44.04 Watts (45.80 Watts)^C
+--------------------------
+Total energy: 4211.19 Joules, including:
+	CPU energy: 4211.19 Joules
+	GPU energy: 0.00 Joules
+--------------------------
+
+real	1m33,735s
+user	0m0,026s
+sys	0m0,031s
+
