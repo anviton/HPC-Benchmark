@@ -376,74 +376,74 @@ Cargo.lock
 ## Recusrion
 ### Fibo
 #### C
-Source/Recursion/C/fibo/fibo_c
+Source/Algo/Recursion/C/fibo/fibo_c
 
 #### C++
-Source/Recursion/C++/fibo/fibo_cpp
+Source/Algo/Recursion/C++/fibo/fibo_cpp
 
 #### Fortan
-Source/Recursion/Fortran/fibo/fibo_fortran
+Source/Algo/Recursion/Fortran/fibo/fibo_fortran
 
 #### Rust
-Source/Recursion/Rust/fibo/fibo_rust
+Source/Algo/Recursion/Rust/fibo/fibo_rust
 
 ## Sort
 ### Bubble_sort
 #### C
-Source/Sort/C/bubble_sort/bubble-sort_c
+Source/Algo/Sort/C/bubble_sort/bubble-sort_c
 
 #### C++
-Source/Sort/C++/bubble_sort/bubble-sort_cpp
+Source/Algo/Sort/C++/bubble_sort/bubble-sort_cpp
 
 #### Fortan
-Source/Sort/Fortran/bubble_sort/bubble-sort_fortran
+Source/Algo/Sort/Fortran/bubble_sort/bubble-sort_fortran
 
 #### Rust
-Source/Sort/Rust/bubble_sort/bubble-sort_rust
+Source/Algo/Sort/Rust/bubble_sort/bubble-sort_rust
 
 ## Binary trees
 ### Binary trees
 #### C
-Source/BinaryTrees/C/binary_trees/binary-trees_c
+Source/Algo/BinaryTrees/C/binary_trees/binary-trees_c
 
 #### C++
-Source/BinaryTrees/C++/binary_trees/binary-trees_cpp
-Source/BinaryTrees/C++/binary_trees/binary-trees_smartPtr_cpp
+Source/Algo/BinaryTrees/C++/binary_trees/binary-trees_cpp
+Source/Algo/BinaryTrees/C++/binary_trees/binary-trees_smartPtr_cpp
 
 #### Fortran
-Source/BinaryTrees/Fortran/binary_trees/binary-trees_fortran
+Source/Algo/BinaryTrees/Fortran/binary_trees/binary-trees_fortran
 
 #### Rust
-Source/BinaryTrees/Rust/binary_trees/binary-trees_rust
+Source/Algo/BinaryTrees/Rust/binary_trees/binary-trees_rust
 
 
 ## Fannkuch
 ### Fannkuch redux
 #### C
-Source/Fannkuch/C/fannkuch_redux/fannkuch-redux_c
+Source/Algo/Fannkuch/C/fannkuch_redux/fannkuch-redux_c
 
 #### C++
-Source/Fannkuch/C++/fannkuch_redux/fannkuch-redux_cpp
+Source/Algo/Fannkuch/C++/fannkuch_redux/fannkuch-redux_cpp
 
 #### Fortran
-Source/Fannkuch/Fortran/fannkuch_redux/fannkuch-redux_fortran
+Source/Algo/Fannkuch/Fortran/fannkuch_redux/fannkuch-redux_fortran
 
 #### Rust
-Source/Fannkuch/Rust/fannkuch_redux/fannkuch-redux_rust
+Source/Algo/Fannkuch/Rust/fannkuch_redux/fannkuch-redux_rust
 
 ## Fasta
 ### Fasta
 #### C
-Source/Fasta/C/fasta/fasta_c
+Source/Algo/Fasta/C/fasta/fasta_c
 
 #### C++
-Source/Fasta/C++/fasta/fasta_cpp
+Source/Algo/Fasta/C++/fasta/fasta_cpp
 
 #### Fortran
-Source/Fasta/Fortran/fasta/fasta_fortran
+Source/Algo/Fasta/Fortran/fasta/fasta_fortran
 
 #### Rust
-Source/Fasta/Rust/fasta/fasta_rust
+Source/Algo/Fasta/Rust/fasta/fasta_rust
 
 
 
