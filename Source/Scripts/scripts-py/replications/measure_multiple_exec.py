@@ -54,8 +54,10 @@ def execute_and_measure(executable_name, args, language):
     if language == "java":
         class_name = os.path.splitext(os.path.basename(source_file))[0]
         command = ["/usr/bin/time", "-f", "%U %S %e", "java", "-cp", bin_dir, class_name]
-    elif language in ["ruby", "python"]:
+    elif language in ["ruby"]:
         command = ["/usr/bin/time", "-f", "%U %S %e", language, source_file]
+    elif language in ["python"]:
+        command = ["/usr/bin/time", "-f", "%U %S %e", "python3", source_file]
     elif language == "erlang" and len(args) > 0:
         erl_command = f'erl -noshell -run {executable_name} main'
         command_str = f'/usr/bin/time -f "%U %S %e" {erl_command}'
@@ -73,6 +75,7 @@ def execute_and_measure(executable_name, args, language):
 
     if language != "erlang":
         result = subprocess.run(command, capture_output=True, text=True, shell=False)
+        # print(result)
     
     if result.returncode != 0:
         print("Execution error:", result.stderr)
@@ -97,7 +100,7 @@ with open(output_file_path, "w") as output_file:
     else:
         output_file.write("User Time (s), System Time (s), Real Time (s)\n")
 
-    for i in range(30):
+    for i in range(1):
         print(f"[{i+1}] - Running...")
         result = execute_and_measure(executable_name, executable_args, language)
         if result and language not in ["python", "ruby",  "java"]:
