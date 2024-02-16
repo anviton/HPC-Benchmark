@@ -75,13 +75,12 @@ def execute_and_measure(executable_name, args, language):
 
     if language != "erlang":
         result = subprocess.run(command, capture_output=True, text=True, shell=False)
-        # print(result)
     
     if result.returncode != 0:
         print("Execution error:", result.stderr)
         return None
 
-    timings = result.stderr.strip().split() if language not in ["python", "ruby", "erlang"] else result.stdout.strip().split()
+    timings = result.stderr.strip().split()
     user_time, sys_time, real_time = timings[0], timings[1], timings[2]
 
     return {
@@ -100,9 +99,10 @@ with open(output_file_path, "w") as output_file:
     else:
         output_file.write("User Time (s), System Time (s), Real Time (s)\n")
 
-    for i in range(1):
+    for i in range(30):
         print(f"[{i+1}] - Running...")
         result = execute_and_measure(executable_name, executable_args, language)
+
         if result and language not in ["python", "ruby",  "java"]:
             if language == "erlang":
                 executable_size_kb = os.path.getsize(executable_name + ".beam") / 1024
