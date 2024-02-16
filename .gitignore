@@ -445,6 +445,10 @@ Source/Algo/Fasta/Fortran/fasta/fasta_fortran
 #### Rust
 Source/Algo/Fasta/Rust/fasta/fasta_rust
 
+# Script exec file
+## Recursion
+Source/Scripts/scripts-bash/Recursion_Fibo_30_times/fibonacci
+
 
 
 
