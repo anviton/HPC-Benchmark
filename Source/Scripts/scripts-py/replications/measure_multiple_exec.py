@@ -1,6 +1,7 @@
 import subprocess
 import os
 import sys
+import socket
 from time import time
 
 def is_integer(s):
@@ -20,8 +21,10 @@ source_file = sys.argv[2]
 if (len(sys.argv) > 2):
     executable_args = [arg for arg in sys.argv[3:] if is_integer(arg)]
 
+filename  = "{}_{}_{}".format(socket.gethostname(), language, "execution_results.csv")
+
 output_dir          = os.path.dirname(os.path.abspath(source_file))
-output_file_path    = os.path.join(output_dir, "execution_results.csv")
+output_file_path    = os.path.join(output_dir, filename)
 source_dir          = os.path.dirname(os.path.abspath(source_file))
 root_dir            = os.path.dirname(source_dir)
 bin_dir             = os.path.join(root_dir, "bin")

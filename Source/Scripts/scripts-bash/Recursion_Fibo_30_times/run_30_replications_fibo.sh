@@ -8,7 +8,7 @@ python3 ../../scripts-py/replications/measure_multiple_exec.py cpp ../../../Algo
 echo -e "\n\n"
 
 echo "[Recursion] - run Erlang 30 times"
-python3 ../scripts-py/replications/measure_multiple_exec.py erlang ../../Algo/Recursion/Erlang/fibo/fibonacci.erl
+python3 ../../scripts-py/replications/measure_multiple_exec.py erlang ../../../Algo/Recursion/Erlang/fibo/fibonacci.erl
 echo -e "\n\n"
 
 echo "[Recursion] - run Fortran 30 times"
