@@ -2,6 +2,7 @@ import subprocess
 import os
 import sys
 import socket
+import argparse
 from time import time
 
 def is_integer(s):
@@ -10,16 +11,21 @@ def is_integer(s):
         return True
     except ValueError:
         return False
-    
-if len(sys.argv) < 2:
-    print("Usage: script.py <language> path-to-source-file [additional_args NUMBER]")
-    sys.exit(1)
 
-language    = sys.argv[1].lower()
-source_file = sys.argv[2]
+parser = argparse.ArgumentParser(description='Parse arg')
 
-if (len(sys.argv) > 2):
-    executable_args = [arg for arg in sys.argv[3:] if is_integer(arg)]
+parser.add_argument('-l', '--language', help='Votre option nommable', required=True)
+parser.add_argument('-p', '--path', help='Votre option nommable', required=True)
+parser.add_argument('-o', '--options', help='Votre option nommable', required=False)
+parser.add_argument('-a', '--args', help='Votre option nommable', required=False)
+
+
+args = parser.parse_args()
+
+language = (args.language).lower()
+source_file = args.path
+executable_args = args.args
+options = args.options
 
 filename  = "{}_{}_{}".format(socket.gethostname(), language, "execution_results.csv")
 
@@ -40,6 +46,10 @@ def compile_source(language, source_file, executable_name):
         "erlang": f"erlc {source_file}",
         "cpp": f"g++ {source_file} -o {executable_name}",
     }
+
+    if options :
+        compile_commands[language] = compile_commands[language] + " " + options
+
     if language in compile_commands:
         print("[Compilation] - Compiling...")
         compilation_result = subprocess.run(compile_commands[language], shell=True, capture_output=True)
@@ -58,17 +68,16 @@ def execute_and_measure(executable_name, args, language):
         command = ["/usr/bin/time", "-f", "%U %S %e", language, source_file]
     elif language in ["python"]:
         command = ["/usr/bin/time", "-f", "%U %S %e", "python3", source_file]
-    elif language == "erlang" and len(args) > 0:
+    elif language == "erlang" and args:
         erl_command = f'erl -noshell -run {executable_name} main'
         command_str = f'/usr/bin/time -f "%U %S %e" {erl_command}'
         if args:
             command_str += ' ' + ' '.join(args)
         result = subprocess.run(command_str, capture_output=True, text=True, shell=True)
-    elif language == "erlang" and len(args) == 0:
+    elif language == "erlang" and args is None:
         erl_command = f'erl -noshell -s {executable_name} main -s init stop'
         command_str = f'/usr/bin/time -f "%U %S %e" {erl_command}'
-        if args:
-            command_str += ' ' + ' '.join(args)
+
         result = subprocess.run(command_str, capture_output=True, text=True, shell=True)
     else:
         command = ["/usr/bin/time", "-f", "%U %S %e", "./" + executable_name]
@@ -79,7 +88,6 @@ def execute_and_measure(executable_name, args, language):
     if result.returncode != 0:
         print("Execution error:", result.stderr)
         return None
-
     timings = result.stderr.strip().split()
     user_time, sys_time, real_time = timings[0], timings[1], timings[2]
 
@@ -102,7 +110,7 @@ with open(output_file_path, "w") as output_file:
     for i in range(30):
         print(f"[{i+1}] - Running...")
         result = execute_and_measure(executable_name, executable_args, language)
-
+        
         if result and language not in ["python", "ruby",  "java"]:
             if language == "erlang":
                 executable_size_kb = os.path.getsize(executable_name + ".beam") / 1024
