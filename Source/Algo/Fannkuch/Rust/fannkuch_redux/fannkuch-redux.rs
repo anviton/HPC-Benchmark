@@ -1,4 +1,4 @@
-use std::{cmp, mem};
+use std::{cmp, mem, env};
 
 const NUM_BLOCKS: u32 = 24;
 
@@ -86,7 +86,14 @@ fn fannkuch(n: i32) -> (i32, i32) {
 }
 
 fn main() {
-    let n = 12;
+    let args: Vec<String> = env::args().collect();
+    let n = match args[1].parse::<i32>() {
+        Ok(n) => n,
+        Err(_) => {
+            eprintln!("Erreur : l'argument doit être un entier.");
+            std::process::exit(1);
+        }
+    };    
     let (checksum, maxflips) = fannkuch(n);
     println!("{}\nPfannkuchen({}) = {}", checksum, n, maxflips);
 }

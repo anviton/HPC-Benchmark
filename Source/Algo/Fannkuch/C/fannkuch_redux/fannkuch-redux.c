@@ -74,8 +74,8 @@ int fannkuch(int n, int *checksum) {
     }
 }
 
-int main() {
-    int n = 12;
+int main(int argc, char *argv[]){
+    int n = atoi(argv[1]);
     int checksum;
     int maxFlips = fannkuch(n, &checksum); // Passez l'adresse de checksum
     printf("%d\n", checksum); // Affichez le checksum

@@ -14,10 +14,12 @@ def is_integer(s):
 
 parser = argparse.ArgumentParser(description='Parse arg')
 
-parser.add_argument('-l', '--language', help='Votre option nommable', required=True)
-parser.add_argument('-p', '--path', help='Votre option nommable', required=True)
-parser.add_argument('-o', '--options', help='Votre option nommable', required=False)
-parser.add_argument('-a', '--args', help='Votre option nommable', required=False)
+parser.add_argument('-l', '--language', help='Language of the algorithm', required=True)
+parser.add_argument('-p', '--path', help='Path of the source code', required=True)
+parser.add_argument('-r', '--rep', help='Number of replications', required=True)
+parser.add_argument('-o', '--options', help='Options of compilation', required=False)
+parser.add_argument('-a', '--args', help='Arguments for the execution', required=False)
+
 
 
 args = parser.parse_args()
@@ -26,6 +28,7 @@ language = (args.language).lower()
 source_file = args.path
 executable_args = args.args
 options = args.options
+nb_replications = args.rep
 
 filename  = "{}_{}_{}".format(socket.gethostname(), language, "execution_results.csv")
 
@@ -68,23 +71,24 @@ def execute_and_measure(executable_name, args, language):
         command = ["/usr/bin/time", "-f", "%U %S %e", language, source_file]
     elif language in ["python"]:
         command = ["/usr/bin/time", "-f", "%U %S %e", "python3", source_file]
-    elif language == "erlang" and args:
+    elif language == "erlang" and executable_args:
         erl_command = f'erl -noshell -run {executable_name} main'
         command_str = f'/usr/bin/time -f "%U %S %e" {erl_command}'
-        if args:
-            command_str += ' ' + ' '.join(args)
-        result = subprocess.run(command_str, capture_output=True, text=True, shell=True)
-    elif language == "erlang" and args is None:
-        erl_command = f'erl -noshell -s {executable_name} main -s init stop'
-        command_str = f'/usr/bin/time -f "%U %S %e" {erl_command}'
-
+        if executable_args:
+            command_str += ' ' + executable_args
+        else :
+            erl_command = f'erl -noshell -s {executable_name} main -s init stop'
+            command_str = f'/usr/bin/time -f "%U %S %e" {erl_command}'
         result = subprocess.run(command_str, capture_output=True, text=True, shell=True)
     else:
         command = ["/usr/bin/time", "-f", "%U %S %e", "./" + executable_name]
 
     if language != "erlang":
+        if executable_args :
+            command += [executable_args]
         result = subprocess.run(command, capture_output=True, text=True, shell=False)
     
+
     if result.returncode != 0:
         print("Execution error:", result.stderr)
         return None
@@ -107,7 +111,7 @@ with open(output_file_path, "w") as output_file:
     else:
         output_file.write("User Time (s), System Time (s), Real Time (s)\n")
 
-    for i in range(30):
+    for i in range(int(nb_replications)):
         print(f"[{i+1}] - Running...")
         result = execute_and_measure(executable_name, executable_args, language)
         

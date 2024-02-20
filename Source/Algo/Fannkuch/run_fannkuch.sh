@@ -8,14 +8,14 @@ base_path="./"
 cd "${base_path}C/fannkuch_redux"
 gcc fannkuch-redux.c -o fannkuch-redux_c
 echo "[Fannkuch redux] - run C file..."
-time ./fannkuch-redux_c
+time ./fannkuch-redux_c 12
 cd - > /dev/null
 echo -e "\n\n"
 
 cd "${base_path}C++/fannkuch_redux"
 g++ fannkuch-redux.cpp -o fannkuch-redux_cpp
 echo "[Fannkuch redux] - run C++ file..."
-time ./fannkuch-redux_cpp
+time ./fannkuch-redux_cpp 12
 cd - > /dev/null
 echo -e "\n\n"
 
@@ -42,7 +42,7 @@ echo -e "\n\n"
 
 cd "${base_path}Python/fannkuch_redux"
 echo "[Fannkuch redux] - run Python file..."
-time python3 fannkuch-redux.py
+time python3 fannkuch-redux.py 12
 cd - > /dev/null
 echo -e "\n\n"
 
@@ -55,7 +55,7 @@ echo -e "\n\n"
 cd "${base_path}Rust/fannkuch_redux"
 rustc fannkuch-redux.rs -o fannkuch-redux_rust
 echo "[Fannkuch redux] - run Rust file..."
-time ./fannkuch-redux_rust
+time ./fannkuch-redux_rust 12
 cd - > /dev/null
 
 

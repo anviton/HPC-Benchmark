@@ -125,7 +125,7 @@ Result fannkuch(int n)
 
 int main(int argc, char** argv)
 {
-   int n = 12;
+   int n = atoi(argv[1]);
    if(argc > 1)n = atoi(argv[1]);
    if(n < 3 || n > 12)
    {
