@@ -21,7 +21,7 @@ parser.add_argument('-o', '--options', help='Options of compilation', required=F
 parser.add_argument('-a', '--args', help='Arguments for the execution', required=False)
 
 
-
+executable_args = ""
 args = parser.parse_args()
 
 language = (args.language).lower()
@@ -71,15 +71,18 @@ def execute_and_measure(executable_name, args, language):
         command = ["/usr/bin/time", "-f", "%U %S %e", language, source_file]
     elif language in ["python"]:
         command = ["/usr/bin/time", "-f", "%U %S %e", "python3", source_file]
-    elif language == "erlang" and executable_args:
-        erl_command = f'erl -noshell -run {executable_name} main'
-        command_str = f'/usr/bin/time -f "%U %S %e" {erl_command}'
+    elif language == "erlang" :
         if executable_args:
-            command_str += ' ' + executable_args
+            erl_command = f'erl -noshell -s {executable_name} main {executable_args} -s init stop'
         else :
             erl_command = f'erl -noshell -s {executable_name} main -s init stop'
-            command_str = f'/usr/bin/time -f "%U %S %e" {erl_command}'
+        command_str = f'/usr/bin/time -f "%U %S %e" {erl_command}'
         result = subprocess.run(command_str, capture_output=True, text=True, shell=True)
+        if result.returncode != 0:
+            erl_command = f'erl -noshell -run {executable_name} main {executable_args}'
+            command_str = f'/usr/bin/time -f "%U %S %e" {erl_command}'
+            result = subprocess.run(command_str, capture_output=True, text=True, shell=True)
+
     else:
         command = ["/usr/bin/time", "-f", "%U %S %e", "./" + executable_name]
 
