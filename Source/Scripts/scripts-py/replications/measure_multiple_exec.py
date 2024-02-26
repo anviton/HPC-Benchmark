@@ -72,6 +72,7 @@ def compile_source(language, source_file, executable_name):
     if language in compile_commands:
         print("[Compilation] - Compiling...")
         compilation_result = subprocess.run(compile_commands[language], shell=True, capture_output=True)
+        print(compile_commands[language])
         if compilation_result.returncode != 0:
             print("Compilation error:", compilation_result.stderr.decode())
             sys.exit(1)
@@ -133,6 +134,7 @@ with open(output_file_path, "w") as output_file:
     for i in range(int(nb_replications)):
         print(f"[{i+1}] - Running...")
         result = execute_and_measure(executable_name, executable_args, language)
+        print(executable_name)
         
         if result and language not in ["python", "ruby",  "java"]:
             if language == "erlang":
