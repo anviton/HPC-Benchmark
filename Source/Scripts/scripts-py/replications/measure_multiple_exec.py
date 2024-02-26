@@ -19,18 +19,24 @@ parser.add_argument('-p', '--path', help='Path of the source code', required=Tru
 parser.add_argument('-r', '--rep', help='Number of replications', required=True)
 parser.add_argument('-o', '--options', help='Options of compilation', required=False)
 parser.add_argument('-a', '--args', help='Arguments for the execution', required=False)
-
+parser.add_argument('-opt', '--optimisations', help='Optimisations of compilation', required=False)
 
 executable_args = ""
 args = parser.parse_args()
 
 language = (args.language).lower()
 source_file = args.path
-executable_args = args.args
+if args.args :
+    executable_args = args.args
 options = args.options
 nb_replications = args.rep
 
-filename  = "{}_{}_{}".format(socket.gethostname(), language, "execution_results.csv")
+opti = "o"
+if args.optimisations :
+    opti = args.optimisations
+    filename  = "{}_{}_{}_{}".format(socket.gethostname(), language, "o" + opti, "execution_results.csv")
+else :    
+    filename  = "{}_{}_{}".format(socket.gethostname(), language, "execution_results.csv")
 
 output_dir          = os.path.dirname(os.path.abspath(source_file))
 output_file_path    = os.path.join(output_dir, filename)
@@ -41,14 +47,24 @@ bin_dir             = os.path.join(root_dir, "bin")
 executable_name     = os.path.splitext(os.path.basename(source_file))[0]
 
 def compile_source(language, source_file, executable_name):
-    compile_commands = {
-        "rust": f"rustc {source_file} -o {executable_name}",
-        "java": f"javac -d {bin_dir} -sourcepath {source_dir} {source_file}",
-        "fortran": f"gfortran {source_file} -o {executable_name}",
-        "c": f"gcc {source_file} -o {executable_name}", 
-        "erlang": f"erlc {source_file}",
-        "cpp": f"g++ {source_file} -o {executable_name}",
-    }
+    if args.optimisations :
+        compile_commands = {
+            "rust": f"rustc -C opt-level={opti} {source_file} -o {executable_name}",
+            "java": f"javac -d {bin_dir} -sourcepath {source_dir} {source_file}",
+            "fortran": f"gfortran -o{opti} {source_file} -o {executable_name}",
+            "c": f"gcc -o{opti} {source_file} -o {executable_name}", 
+            "erlang": f"erlc {source_file}",
+            "cpp": f"g++ -o{opti} {source_file} -o {executable_name}",
+        }
+    else :
+        compile_commands = {
+            "rust": f"rustc {source_file} -o {executable_name}",
+            "java": f"javac -d {bin_dir} -sourcepath {source_dir} {source_file}",
+            "fortran": f"gfortran {source_file} -o {executable_name}",
+            "c": f"gcc {source_file} -o {executable_name}", 
+            "erlang": f"erlc {source_file}",
+            "cpp": f"g++ {source_file} -o {executable_name}",
+        }
 
     if options :
         compile_commands[language] = compile_commands[language] + " " + options
