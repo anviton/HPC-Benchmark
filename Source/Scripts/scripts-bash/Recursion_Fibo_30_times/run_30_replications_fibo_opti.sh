@@ -1,3 +1,5 @@
+#!/bin/bash
+
 nb_replications=30
 
 for opti in {1..3}
@@ -18,5 +20,4 @@ do
     python3 ../../scripts-py/replications/measure_multiple_exec.py -r $nb_replications -l Rust -p ../../../Algo/Recursion/Rust/fibo/fibonacci.rs -opt $opti
     echo -e "\n\n"
 done
-
 
