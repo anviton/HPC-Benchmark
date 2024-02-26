@@ -34,7 +34,7 @@ nb_replications = args.rep
 opti = "o"
 if args.optimisations :
     opti = args.optimisations
-    filename  = "{}_{}_{}_{}".format(socket.gethostname(), language, "o" + opti, "execution_results.csv")
+    filename  = "{}_{}-{}_{}".format(socket.gethostname(), language, "o" + opti, "execution_results.csv")
 else :    
     filename  = "{}_{}_{}".format(socket.gethostname(), language, "execution_results.csv")
 
