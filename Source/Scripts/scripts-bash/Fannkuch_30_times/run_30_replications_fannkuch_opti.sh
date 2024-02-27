@@ -1,3 +1,5 @@
+#!/bin/bash
+
 nb_replications=30
 parameter=12
 
