@@ -1,9 +1,14 @@
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 class TreeNode {
     TreeNode left;
     TreeNode right;
 }
 
 public class BinaryTree {
+
+    private static ExecutorService executor = Executors.newSingleThreadExecutor();
 
     public static TreeNode makeTree(int depth) {
         if (depth > 0) {
@@ -30,5 +35,7 @@ public class BinaryTree {
             int totalNodes = checkTree(tree);
             System.out.println("Tree of depth " + depth + " has " + totalNodes + " nodes.");
         }
+
+        executor.shutdown();
     }
 }
