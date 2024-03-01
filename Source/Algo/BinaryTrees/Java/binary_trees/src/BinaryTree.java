@@ -20,7 +20,7 @@ public class BinaryTree {
         }
         return null;
     }
-
+    
     public static int checkTree(TreeNode node) {
         if (node == null) {
             return 0;
