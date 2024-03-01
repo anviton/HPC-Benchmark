@@ -91,13 +91,13 @@ def execute_and_measure(executable_name, args, language):
         command = ["/usr/bin/time", "-f", "%U %S %e", "taskset", "-c", cpu_mask, "python3", source_file]
     elif language == "erlang":
         if executable_args:
-            erl_command = f'erl -noshell -s {executable_name} main {executable_args} -s init stop'
+            erl_command = f'erl +S 1 -noshell -s {executable_name} main {executable_args} -s init stop'
         else:
-            erl_command = f'erl -noshell -s {executable_name} main -s init stop'
+            erl_command = f'erl +S 1 -noshell -s {executable_name} main -s init stop'
         command_str = f'/usr/bin/time -f "%U %S %e" taskset -c {cpu_mask} {erl_command}'
         result = subprocess.run(command_str, capture_output=True, text=True, shell=True)
         if result.returncode != 0:
-            erl_command = f'erl -noshell -run {executable_name} main {executable_args}'
+            erl_command = f'erl +S 1 -noshell -run {executable_name} main {executable_args}'
             command_str = f'/usr/bin/time -f "%U %S %e" taskset -c {cpu_mask} {erl_command}'
             result = subprocess.run(command_str, capture_output=True, text=True, shell=True)
     else:
