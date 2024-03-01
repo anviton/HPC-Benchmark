@@ -79,35 +79,34 @@ def compile_source(language, source_file, executable_name):
         print("[Compilation] - Success")
 
 def execute_and_measure(executable_name, args, language):
+    cpu_mask = "0"  # CPU for taskset
     command = []
 
     if language == "java":
         class_name = os.path.splitext(os.path.basename(source_file))[0]
-        command = ["/usr/bin/time", "-f", "%U %S %e", "java", "-cp", bin_dir, class_name]
+        command = ["taskset", cpu_mask, "/usr/bin/time", "-f", "%U %S %e", "java", "-cp", bin_dir, class_name]
     elif language in ["ruby"]:
-        command = ["/usr/bin/time", "-f", "%U %S %e", language, source_file]
+        command = ["taskset", cpu_mask, "/usr/bin/time", "-f", "%U %S %e", language, source_file]
     elif language in ["python"]:
-        command = ["/usr/bin/time", "-f", "%U %S %e", "python3", source_file]
-    elif language == "erlang" :
+        command = ["taskset", cpu_mask, "/usr/bin/time", "-f", "%U %S %e", "python3", source_file]
+    elif language == "erlang":
         if executable_args:
             erl_command = f'erl -noshell -s {executable_name} main {executable_args} -s init stop'
-        else :
+        else:
             erl_command = f'erl -noshell -s {executable_name} main -s init stop'
-        command_str = f'/usr/bin/time -f "%U %S %e" {erl_command}'
+        command_str = f'taskset {cpu_mask} /usr/bin/time -f "%U %S %e" {erl_command}'
         result = subprocess.run(command_str, capture_output=True, text=True, shell=True)
         if result.returncode != 0:
             erl_command = f'erl -noshell -run {executable_name} main {executable_args}'
-            command_str = f'/usr/bin/time -f "%U %S %e" {erl_command}'
+            command_str = f'taskset {cpu_mask} /usr/bin/time -f "%U %S %e" {erl_command}'
             result = subprocess.run(command_str, capture_output=True, text=True, shell=True)
-
     else:
-        command = ["/usr/bin/time", "-f", "%U %S %e", "./" + executable_name]
+        command = ["taskset", cpu_mask, "/usr/bin/time", "-f", "%U %S %e", "./" + executable_name]
 
     if language != "erlang":
-        if executable_args :
+        if executable_args:
             command += [executable_args]
         result = subprocess.run(command, capture_output=True, text=True, shell=False)
-    
 
     if result.returncode != 0:
         print("Execution error:", result.stderr)
